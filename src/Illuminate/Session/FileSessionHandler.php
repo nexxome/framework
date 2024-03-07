@@ -109,5 +109,7 @@ class FileSessionHandler implements SessionHandlerInterface
         foreach ($files as $file) {
             $this->files->delete($file->getRealPath());
         }
+
+        return false;
     }
 }

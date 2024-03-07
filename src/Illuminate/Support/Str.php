@@ -490,7 +490,7 @@ class Str
      */
     public static function upper($value)
     {
-        return mb_strtoupper($value, 'UTF-8');
+        return mb_strtoupper($value?:'', 'UTF-8');
     }
 
     /**
@@ -615,7 +615,7 @@ class Str
      */
     public static function substr($string, $start, $length = null)
     {
-        return mb_substr($string, $start, $length, 'UTF-8');
+        return mb_substr($string?:'', $start, $length, 'UTF-8');
     }
 
     /**
