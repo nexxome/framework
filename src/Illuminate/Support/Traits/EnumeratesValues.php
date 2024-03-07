@@ -724,7 +724,7 @@ trait EnumeratesValues
      *
      * @return array
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         return array_map(function ($value) {
             if ($value instanceof JsonSerializable) {
